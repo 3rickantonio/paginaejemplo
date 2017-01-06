@@ -1,9 +1,9 @@
 <?php
 $db_host="localhost";
-$db_user="cristoes";
-$db_password="5k7YLp3q9i";
-$db_name="cristoes_mipaginaweb";
-$db_table_name="formulario";
+$db_user="usuario_base_de_datos";
+$db_password="clave__base_de_datos";
+$db_name="nombre_base_de_datos";
+$db_table_name="tabla_base_de_datos";
    $db_connection = mysql_connect($db_host, $db_user, $db_password);
  
 if (!$db_connection) {
@@ -15,13 +15,7 @@ $subs_tema = utf8_decode($_POST['tema']);
 $subs_mensaje = utf8_decode($_POST['mensaje']);
  
 $resultado=mysql_query("SELECT * FROM ".$db_table_name." WHERE email = '".$subs_email."'", $db_connection);
- 
 
- 
-
- 
-
-	
 	$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`name` , `email` , `tema`, `mensaje`) VALUES ("' . $subs_name . '", "' . $subs_email . '", "' . $subs_tema . '", "' . $subs_mensaje . '")';
  
 mysql_select_db($db_name, $db_connection);
