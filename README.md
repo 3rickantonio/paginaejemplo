@@ -14,3 +14,4 @@ $db_name="nombre_base_de_datos";
 $db_table_name="tabla_base_de_datos";
 
 ```
+![alt tag](imagenes/paginaweb.png)
